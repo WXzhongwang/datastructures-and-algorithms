@@ -12,10 +12,12 @@ public class Solution3 {
         int length1 = nums1.length, length2 = nums2.length;
         int totalLength = length1 + length2;
         if (totalLength % 2 == 1) {
+            // 奇数
             int midIndex = totalLength / 2;
             double median = getKthElement(nums1, nums2, midIndex + 1);
             return median;
         } else {
+            // 偶数
             int midIndex1 = totalLength / 2 - 1, midIndex2 = totalLength / 2;
             double median = (getKthElement(nums1, nums2, midIndex1 + 1) + getKthElement(nums1, nums2, midIndex2 + 1)) / 2.0;
             return median;
