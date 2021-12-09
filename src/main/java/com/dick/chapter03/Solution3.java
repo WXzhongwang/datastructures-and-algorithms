@@ -36,7 +36,7 @@ public class Solution3 {
     }
 
     public static void main(String[] args) {
-        // System.out.println(new Solution3().lengthOfLongestSubstring("pwwkew"));
+        // System.out.println(new Solution3().lengthOfLongestSubstring("abcbx"));
         System.out.println(new Solution3().lengthOfLongestSubstringV2("pwwkew"));
     }
 
@@ -50,7 +50,9 @@ public class Solution3 {
             }
             ans = Math.max(ans, end - start + 1);
             map.put(s.charAt(end), end + 1);
+            System.out.println(map.toString());
         }
         return ans;
     }
+    
 }
